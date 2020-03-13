@@ -1,8 +1,9 @@
-# Social Distance Strategies #
+# 🧑‍🤝‍🧑 Social Distance Strategies #
 
 This folder contains scripts for running discrete simulations over a contact network with the current structure:
 
 "user_id","target_user_id","w_ij"
+
 "1,1,0.247279943674103
 
 # Simulation hyperparameters:
