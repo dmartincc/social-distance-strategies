@@ -5,7 +5,7 @@
 #include <time.h>
 #include <string.h>
 
-typedef struct Node{
+typedef struct Node {
   int k;
   int t;
   int *v;

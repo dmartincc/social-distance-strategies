@@ -11,7 +11,9 @@ This folder contains scripts for running discrete simulations over a contact net
 __Probability of getting infected__
 
 rho = 0.25 
+
 days = since infected
+
 Beta = w_ij * rho * 1/days
 
 __Probability of getting recovered__

@@ -1,7 +1,6 @@
 #include "head.h"
 
-void readNetwork()
-{
+void readNetwork() {
   int s, t;
   double w;
   FILE *f;

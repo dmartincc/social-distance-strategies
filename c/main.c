@@ -1,19 +1,17 @@
 #include "head.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   int t0;
 
   t0 = time(NULL);
     
   initialize(argv);
 
-  for(int run=0;run<n_runs;run++)
-    {
-      init();
-      while(n_inf>0)
-	spread(run);	
-    }
+  for(int run=0;run<n_runs;run++) {
+    init();
+    while(n_inf>0)
+	  spread(run);	
+  }
   fclose(fsim);
   fclose(fsim_sir);
   printf("Execution time %d seconds\n",(int)time(NULL)-t0);
@@ -23,8 +21,7 @@ int main(int argc, char *argv[])
   return 0;
 }
 
-void initialize(char *argv[])
-{
+void initialize(char *argv[]) {
   int seed;
   
   N = 65852;
@@ -47,8 +44,7 @@ void initialize(char *argv[])
 }
   
 
-void initRandom(int s)
-{
+void initRandom(int s) {
   unsigned long int seed;
   unsigned int *random_ini;
   int size, rank, sizint;
@@ -68,13 +64,11 @@ void initRandom(int s)
   free(random_ini);
 }
 
-void freeMemory()
-{
-  for(int i=0;i<N;i++)
-    {
-      free(node[i].v);
-      free(node[i].w);
-    }
+void freeMemory() {
+  for(int i=0;i<N;i++) {
+    free(node[i].v);
+    free(node[i].w);
+  }
   free(node);
 
   free(list_inf);
