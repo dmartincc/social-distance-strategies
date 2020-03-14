@@ -2,9 +2,11 @@
 
 This folder contains scripts for running discrete simulations over a contact network with the current structure:
 
-"user_id","target_user_id","w_ij"
+"id","source_user","target_user","layer","w_ij"
 
-"1,1,0.247279943674103
+"1","000277100d5593fec35a151e228f6a485210a3fa87cda78d79c465bbebb6e71e","000277100d5593fec35a151e228f6a485210a3fa87cda78d79c465bbebb6e71e","Community",0.247279943674103
+
+"2","000277100d5593fec35a151e228f6a485210a3fa87cda78d79c465bbebb6e71e","2362ac333f83b3c2c10d78f0082011bf3b08fce5b0d413a04dc07414c58b2b3c","Community",0.0644235188818452
 
 # Simulation hyperparameters:
 
@@ -36,7 +38,7 @@ Compile
  make
 ```
 
-Build
+Run
 
 ```
 ./sir numOfSimulations
