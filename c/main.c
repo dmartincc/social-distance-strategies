@@ -28,19 +28,18 @@ void initialize(char *argv[]) {
   rho = 0.25;
   gammita = 1.0/3;
   
-  file = atoi(argv[1]);
-  n_runs = atoi(argv[2]);
-  
+  n_runs = atoi(argv[1]);
+
   list_inf = malloc(N * sizeof *list_inf);
   new_list_inf = malloc(N * sizeof *new_list_inf);
   
   seed = time(NULL);
   initRandom(seed);
 
-  readNetwork(file);
+  readNetwork();
 
-  fsim = fopen("Results/simulations.txt","w");
-  fsim_sir = fopen("Results/simulations_sir.txt","w");
+  fsim = fopen("results/simulations.txt","w");
+  fsim_sir = fopen("results/simulations_sir.txt","w");
 }
   
 

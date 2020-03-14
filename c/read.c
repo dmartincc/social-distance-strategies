@@ -1,6 +1,7 @@
 #include "head.h"
 
-void readNetwork() {
+void readNetwork()
+{
   int s, t;
   double w;
   FILE *f;
@@ -14,16 +15,12 @@ void readNetwork() {
     node[i].w = malloc(sizeof *node[i].w);
   }
   
-  f = fopen("data/contacts_network_layers_0.05.txt","r");
+  f = fopen("data/network.txt","r");
   while(fgets(string,500,f)) {
-    token = strtok(string,",");
-    id = atoi(token);
-    token = strtok(NULL,",");
+    token = strtok(string," ");
     s = atoi(token);
-    token = strtok(NULL,",");
+    token = strtok(NULL," ");
     t = atoi(token);
-    token = strtok(NULL,",");
-    layer = atoi(token);
     token = strtok(NULL,"\n");
     w = atof(token);
 
