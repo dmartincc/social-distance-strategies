@@ -1,0 +1,31 @@
+void readNetwork()
+{
+  int s, t;
+  double w;
+  FILE *f;
+  char *token;
+  char string[500];
+
+  node = malloc(N *sizeof *node);
+  for(int i=0;i<N;i++)
+    {
+      node[i].k = 0;
+      node[i].v = malloc(sizeof *node[i].v);
+    }
+  
+  f = fopen("Network/network.txt","r");
+  while(fgets(string,500,f))
+    {
+      token = strtok(string," ");
+      s = atoi(token);
+      token = strtok(NULL," ");
+      t = atoi(token);
+      token = strtok(NULL,"\n");
+      w = atof(token);
+
+      node[s].k++;
+      node[s].v = realloc(node[s].v, node[s].k * sizeof *node[s].v);
+      node[s].v[node[s].k-1] = t;
+    }
+  fclose(f);
+}
