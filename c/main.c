@@ -69,7 +69,6 @@ void freeMemory() {
     free(node[i].w);
   }
   free(node);
-
   free(list_inf);
   free(new_list_inf);
 }

@@ -12,7 +12,7 @@ void seedInfection() {
   int seed;
 
   n_inf = 0;
-  for(int i=0;i<100;i++) {
+  for(int i=0;i<10;i++) {
     seed = (int)floor(N*WELLRNG1024a());
 
     node[seed].state = I;
@@ -56,5 +56,6 @@ void spread(int run) {
     n_inf++;
     n_san--;
   }
+  
   fprintf(fsim_sir,"%d %d %d %d %d\n",run,t,n_san,n_inf,N-n_san-n_inf);
 }
