@@ -24,7 +24,20 @@ Argument n controls the number of simulations to run.
 
 ```
  nohup python sir_discrete_simulations_parallel.py n > simulations.out 2> simulations.err &
+```
 
+# Running C code:
+
+Compile
+
+```
+ make
+```
+
+Build
+
+```
+./sir numOfSimulations
 ```
 
 # Output:
@@ -32,4 +45,9 @@ Argument n controls the number of simulations to run.
 Two different of files for each simulation:
 
 1) Discrete results of the epidemic at each step.
+
+simulations,t,S,I,R
+
 2) Aggregated results of the epidemic at each step.
+
+simulations,node_infected,infected_by,t_node_infected,t_infected_by
