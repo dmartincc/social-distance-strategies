@@ -14,6 +14,7 @@ int main(int argc, char *argv[]) {
   }
   fclose(fsim);
   fclose(fsim_sir);
+  fclose(fsim_sir_layers);
   printf("Execution time %d seconds\n",(int)time(NULL)-t0);
 
   freeMemory();
@@ -24,7 +25,7 @@ int main(int argc, char *argv[]) {
 void initialize(char *argv[]) {
   int seed;
   
-  N = 65852;
+  N = 97216;
   rho = 0.25;
   gammita = 1.0/3;
   
@@ -40,6 +41,7 @@ void initialize(char *argv[]) {
 
   fsim = fopen("results/simulations.txt","w");
   fsim_sir = fopen("results/simulations_sir.txt","w");
+  fsim_sir_layers = fopen("results/simulations_sir_layers.txt","w");
 }
   
 
@@ -67,6 +69,7 @@ void freeMemory() {
   for(int i=0;i<N;i++) {
     free(node[i].v);
     free(node[i].w);
+    free(node[i].layer);
   }
   free(node);
   free(list_inf);

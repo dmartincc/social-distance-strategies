@@ -10,6 +10,7 @@ typedef struct Node {
   int t;
   int *v;
   double *w;
+  int *layer;
   int state;
 } Node;
 
@@ -21,7 +22,7 @@ Node *node;
 int *list_inf, *new_list_inf;
 int N, n_runs, n_inf, new_inf, t, n_san;
 double rho, gammita;
-FILE *fsim, *fsim_sir;
+FILE *fsim, *fsim_sir, *fsim_sir_layers;
 
 void initialize();
 void initRandom(int);
