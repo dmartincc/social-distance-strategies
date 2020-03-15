@@ -59,7 +59,8 @@ void spread(int run) {
     n_inf++;
     n_san--;
   }  
+ 
+  fprintf(fsim_sir, "%d %d %d %d %d\n", run, t, n_san, n_inf, N-n_san-n_inf);
   // No sé exactamente como hacer lo que comentas de normalizarlo
-  // fprintf(fsim_sir, "%d %d %d %d %d\n", run, t, n_san, n_inf, N-n_san-n_inf);
-  fprintf(fsim_sir_layers, "%d %d %d %d %d\n", cases);
+  // fprintf(fsim_sir_layers, "%d %d %d %d %d\n", cases);
 }
