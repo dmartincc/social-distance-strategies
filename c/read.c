@@ -12,6 +12,7 @@ void readNetwork() {
     node[i].k = 0;
     node[i].v = malloc(sizeof *node[i].v);
     node[i].w = malloc(sizeof *node[i].w);
+    node[i].layer = malloc(sizeof *node[i].layer);
   }
   
   f = fopen("data/network.txt","r");
