@@ -27,7 +27,10 @@ void seedInfection() {
 void spread(int run) {
   int s, ta;
   int days;
-  int cases[0];
+  int cases[3];
+  
+  for(int i=0;i<3;i++)
+    cases[i] = 0;
   
   t++;
 
@@ -62,5 +65,5 @@ void spread(int run) {
  
   fprintf(fsim_sir, "%d %d %d %d %d\n", run, t, n_san, n_inf, N-n_san-n_inf);
   // No sé exactamente como hacer lo que comentas de normalizarlo
-  // fprintf(fsim_sir_layers, "%d %d %d %d %d\n", cases);
+  fprintf(fsim_sir_layers, "%d %d %d\n", cases[0], cases[1], cases[2]);
 }
