@@ -1,11 +1,7 @@
-library(igraph)
 library(reshape2)
 library(dplyr)
 library(data.table)
 library(ggplot2)
-library(tidycensus)
-library(tigris)
-library(sf)
 library(uuid)
 
 # Read households nodes
