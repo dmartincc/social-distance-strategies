@@ -71,7 +71,7 @@ new_nodes_kids <- data.frame(
   tractcode=numeric()
 )
 
-# Community mixing in Households
+# Community mixing in Households (Too Slow)
 geoids <- unique(hh$GEOID)
 parents <- c()
 for(id in 1:length(geoids)) {
