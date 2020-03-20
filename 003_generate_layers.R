@@ -98,10 +98,10 @@ for(id in 1:length(geoids)) {
         tractcode="",
         layer="HOUSEHOLD"
       ))
-      new_links <- rbind(new_links, new_links_couples)
     }
   }
 }
+new_links <- rbind(new_links, new_links_couples)
 
 # Create kids
 for(i in 1:lenght(parents)) {
